@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VidBits</title>
+    <link rel="icon" type="image/ico" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+    <link rel='stylesheet' href='stylesheets/style.css'>
+  </head>
+  <body>
+    <div id="videos-container" class="contents-container">
+        <div class="video-card">
+          <div class="video-title">{{title}}</div>
+          <div class="video-description">{{description}}</div>
+          <div class="video-url">{{url}}</div>
+          <form class="input-form" action="/videos/{{_id}}/edit" method="post" >
+             <input id="edit" name="Update-button" type="submit" value="Edit"/>
+          </form>
+
+          <form class="input-form" action="/videos/{{_id}}/deletions" method="post" >
+             <input id="delete" name="Update-button" type="submit" value="Delete" />
+          </form>
+
+          </div>
+        <iframe class="video-player" src="{{url}}" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VidBits</title>
+    <link rel="icon" type="image/ico" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+    <link rel='stylesheet' href='stylesheets/style.css'>
+  </head>
+  <body>
+      </div>
+    <div id="videos-container" class="contents-container">
+      {{#each videos as |video|}}
+        <div class="video-card">
+          <iframe class="video-player" src="{{video.url}}" frameborder="0" allowfullscreen></iframe>
+          <div class="video-title"><a href=/videos/show/{{video.id}}>{{video.title}}</a></div>
+          <div class="video-description">{{video.description}}</div>
+        </div>
+      {{/each}}
+  </div>
+  <a href="/videos/create" id="create-video">Create a Video</a>
+
+</body>
+</html>
